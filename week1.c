@@ -7,15 +7,15 @@ int main() {
 	int remain_product[100];
 	int i = 0;
 
-	printf("»óÇ°ÀÇ Á¾·ù °¹¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä>>>");
+	printf("ìƒí’ˆì˜ ì¢…ë¥˜ ê°¯ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”>>>");
 	scanf_s("%d", &number);
 
 	start:
-	printf("»óÇ°µéÀÇ ÀÔ°í ¼ö·®À» ÀÔ·ÂÇØÁÖ¼¼¿ä>>>");
+	printf("ìƒí’ˆë“¤ì˜ ì…ê³  ìˆ˜ëŸ‰ì„ ì…ë ¥í•´ì£¼ì„¸ìš”>>>");
 	for (int i = 0; i < number; i++) {
 		scanf_s("%d", &stock_product[i]);
 	}
-	printf("»óÇ°µéÀÇ ÆÇ¸Å ¼ö·®À» ÀÔ·ÂÇØÁÖ¼¼¿ä>>>");
+	printf("ìƒí’ˆë“¤ì˜ íŒë§¤ ìˆ˜ëŸ‰ì„ ì…ë ¥í•´ì£¼ì„¸ìš”>>>");
 	for (int i = 0; i < number; i++) {
 		scanf_s("%d", &relase_product[i]);
 	}
@@ -23,14 +23,14 @@ int main() {
 		remain_product[i] = stock_product[i] - relase_product[i];
 	}
 	if (remain_product[i] < 0) {
-		printf("¼ö·® Ã¼Å© ¿À·ùÀÔ´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+		printf("ìˆ˜ëŸ‰ ì²´í¬ ì˜¤ë¥˜ì…ë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 		goto start;
 	}
-	printf("°Ë»öÇÏ°íÀÚ ÇÏ´Â »óÇ°ÀÇ ID¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä>>>");
+	printf("ê²€ìƒ‰í•˜ê³ ì í•˜ëŠ” ìƒí’ˆì˜ IDë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”>>>");
 	scanf_s("%d", &number1);
 
-	printf("»óÇ°ÀÇ ¼ö·®Àº>>> %d\n", remain_product[i]);
-	printf("¸ğµç »óÇ°ÀÇ Àç°í¸¦ Ãâ·ÂÇÏ°Ú½À´Ï´Ù.\n");
+	printf("ìƒí’ˆì˜ ìˆ˜ëŸ‰ì€>>> %d\n", remain_product[i]);
+	printf("ëª¨ë“  ìƒí’ˆì˜ ì¬ê³ ë¥¼ ì¶œë ¥í•˜ê² ìŠµë‹ˆë‹¤.\n");
 	
 	for (int i = 0; i < number; i++) {
 		printf("%d", remain_product[i]);

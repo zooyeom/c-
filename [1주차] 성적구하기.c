@@ -35,5 +35,5 @@ int main() {
 		sum += number[i];
 	}
 	avg = (double)sum / 100;
-	printf("�ִ�: %d, �ּڰ�: %d, ���: %d\n", max, min, avg);
+	printf("ÃÖ´ñ°ª: %d, ÃÖ¼Ú°ª: %d, Æò±Õ: %d\n", max, min, avg);
 }

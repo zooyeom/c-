@@ -1,3 +1,9 @@
+//수정 필요한 부분>>
+//1. 메뉴 입력 부분에서 1,2,3,4 / 1,2 이외에 입력되면 다시 루프를 하게 코드를 짜야함
+//2. 판매량 입력시에 입력할때마다 덧셈이 되는게 아니라 입고 받은 수량으로 다시 루프되면서 판매량이 쌓이지 않는 오류가 있다.
+//3. 판매량이 마이너스가 될때를 걸러내는 예외처리가 필요함
+//4. 
+
 #include <stdio.h>
 
 void most_product(int release_product[100], int* name, int* sell) {
@@ -116,7 +122,7 @@ int main() {
     int stock_product[100] = { 0 };
     int release_product[100] = { 0 };
     int remain_product[100] = { 0 };
-    int menu = 0;  // 초기화
+    int menu = 0;  
 
     printf("[쇼핑몰 관리 프로그램]\n");
 

@@ -29,7 +29,7 @@ void least_product(int release_product[100], int* name, int* sell) {
 void Caution(int remain_product[100]) {
     for (int i = 0; i < 5; i++) {
         if (remain_product[i] <= 2) {
-            printf("»óÇ° ID %d: Àç°íºÎÁ·(%d)", i, remain_product[i]);
+            printf("ìƒí’ˆ ID %d: ì¬ê³ ë¶€ì¡±(%d)", i, remain_product[i]);
             printf("\n");
         }
     }
@@ -40,19 +40,19 @@ void Stocked_product(int stock_product[100]) {
     int name;
     int number;
 
-    printf("ÀÔ°í¼ö·® ÀÔ·Â: ÀüÃ¼ »óÇ° ÀÔ°í¼ö·® ÀÔ·Â 1, °³º° »óÇ° ÀÔ°í¼ö·® ÀÔ·Â 2¸¦ ¼±ÅÃ\n");
+    printf("ì…ê³ ìˆ˜ëŸ‰ ì…ë ¥: ì „ì²´ ìƒí’ˆ ì…ê³ ìˆ˜ëŸ‰ ì…ë ¥ 1, ê°œë³„ ìƒí’ˆ ì…ê³ ìˆ˜ëŸ‰ ì…ë ¥ 2ë¥¼ ì„ íƒ\n");
     scanf("%d", &menu);
 
     if (menu == 1) {
-        printf("»óÇ°µéÀÇ ÀÔ°í ¼ö·®À» ÀÔ·ÂÇØÁÖ¼¼¿ä>>>");
+        printf("ìƒí’ˆë“¤ì˜ ì…ê³  ìˆ˜ëŸ‰ì„ ì…ë ¥í•´ì£¼ì„¸ìš”>>>");
         for (int i = 0; i < 5; i++) {
             scanf("%d", &stock_product[i]);
         }
     }
     else if (menu == 2) {
-        printf("»óÇ° ID: ");
+        printf("ìƒí’ˆ ID: ");
         scanf("%d", &name);
-        printf("ÀÔ°í¼ö·®: ");
+        printf("ì…ê³ ìˆ˜ëŸ‰: ");
         scanf("%d", &number);
 
         stock_product[name] = number;
@@ -64,19 +64,19 @@ void Sell_product(int release_product[100]) {
     int name;
     int number;
 
-    printf("ÆÇ¸Å¼ö·® ÀÔ·Â: ÀüÃ¼ »óÇ° ÆÇ¸Å¼ö·® ÀÔ·Â 1, °³º° »óÇ° ÆÇ¸Å¼ö·® ÀÔ·Â 2¸¦ ¼±ÅÃ\n");
+    printf("íŒë§¤ìˆ˜ëŸ‰ ì…ë ¥: ì „ì²´ ìƒí’ˆ íŒë§¤ìˆ˜ëŸ‰ ì…ë ¥ 1, ê°œë³„ ìƒí’ˆ íŒë§¤ìˆ˜ëŸ‰ ì…ë ¥ 2ë¥¼ ì„ íƒ\n");
     scanf("%d", &menu);
 
     if (menu == 1) {
-        printf("»óÇ°µéÀÇ ÆÇ¸Å ¼ö·®À» ÀÔ·ÂÇØÁÖ¼¼¿ä>>>");
+        printf("ìƒí’ˆë“¤ì˜ íŒë§¤ ìˆ˜ëŸ‰ì„ ì…ë ¥í•´ì£¼ì„¸ìš”>>>");
         for (int i = 0; i < 5; i++) {
             scanf("%d", &release_product[i]);
         }
     }
     else if (menu == 2) {
-        printf("»óÇ° ID: ");
+        printf("ìƒí’ˆ ID: ");
         scanf("%d", &name);
-        printf("ÆÇ¸Å¼ö·®: ");
+        printf("íŒë§¤ìˆ˜ëŸ‰: ");
         scanf("%d", &number);
 
         release_product[name] = number;
@@ -97,17 +97,17 @@ void Information(int release_product[100], int stock_product[100]) {
     }
     sell_percent = (float)sell_product / all_product * 100;
 
-    printf("Àç°í ¼ö·®Àº:");
+    printf("ì¬ê³  ìˆ˜ëŸ‰ì€:");
     for (int i = 0; i < 5; i++) {
         printf("%d  ", remain_product[i]);
     }
-    printf("\nÃÑ ÆÇ¸Å·®: %d (ÆÇ¸ÅÀ²: %.2f%%)\n", sell_product, sell_percent);
+    printf("\nì´ íŒë§¤ëŸ‰: %d (íŒë§¤ìœ¨: %.2f%%)\n", sell_product, sell_percent);
 
     most_product(release_product, &name, &sell);
-    printf("°¡Àå ¸¹ÀÌ ÆÈ¸° »óÇ°>>> ID: %d, ÆÇ¸Å·®: %d\n", name, sell);
+    printf("ê°€ì¥ ë§ì´ íŒ”ë¦° ìƒí’ˆ>>> ID: %d, íŒë§¤ëŸ‰: %d\n", name, sell);
 
     least_product(release_product, &name, &sell);
-    printf("°¡Àå Àû°Ô ÆÈ¸° »óÇ°>>> ID: %d, ÆÇ¸Å·®: %d\n", name, sell);
+    printf("ê°€ì¥ ì ê²Œ íŒ”ë¦° ìƒí’ˆ>>> ID: %d, íŒë§¤ëŸ‰: %d\n", name, sell);
 
     Caution(remain_product);
 }
@@ -116,12 +116,12 @@ int main() {
     int stock_product[100] = { 0 };
     int release_product[100] = { 0 };
     int remain_product[100] = { 0 };
-    int menu = 0;  // ÃÊ±âÈ­
+    int menu = 0;  // ì´ˆê¸°í™”
 
-    printf("[¼îÇÎ¸ô °ü¸® ÇÁ·Î±×·¥]\n");
+    printf("[ì‡¼í•‘ëª° ê´€ë¦¬ í”„ë¡œê·¸ë¨]\n");
 
     while (menu != 4) {
-        printf("¿øÇÏ´Â ¸Ş´º¸¦ ¼±ÅÃÇÏ¼¼¿ä.>>>(1.ÀÔ°í 2.ÆÇ¸Å 3.»óÇ°ÇöÈ² 4.Á¾·á)\n");
+        printf("ì›í•˜ëŠ” ë©”ë‰´ë¥¼ ì„ íƒí•˜ì„¸ìš”.>>>(1.ì…ê³  2.íŒë§¤ 3.ìƒí’ˆí˜„í™© 4.ì¢…ë£Œ)\n");
         scanf("%d", &menu);
 
         switch (menu) {

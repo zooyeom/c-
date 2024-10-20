@@ -1,3 +1,5 @@
+//점이 원 안에 있는지 원 밖에 있는지 판단하는 코드
+
 #include <stdio.h>
 #include <math.h>
 typedef struct point{

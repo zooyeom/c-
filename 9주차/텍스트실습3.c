@@ -1,3 +1,5 @@
+//fscanf로 읽어서 fprintf로 쓰는 과정이다.
+
 #include <stdio.h>
 
 int getline(char* line) {

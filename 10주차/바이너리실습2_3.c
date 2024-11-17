@@ -1,3 +1,5 @@
+//"array.bin"파일에 있는 값을 읽어와서 보여준다
+
 #include <stdio.h>
 #define SIZE 100
 

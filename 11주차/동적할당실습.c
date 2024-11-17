@@ -1,3 +1,5 @@
+//정수로 입력받던 값을 포인터를 이동시켜서? 문자형으로 입력받게 해준다.
+
 #include <stdio.h>
 #include <stdlib.h>
 
